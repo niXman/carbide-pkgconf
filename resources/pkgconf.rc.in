@@ -1,0 +1,28 @@
+1 ICON "@PKGCONF_ICON@"
+
+1 VERSIONINFO
+FILEVERSION @PKGCONF_VERSION_CSV@
+PRODUCTVERSION @PKGCONF_VERSION_CSV@
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Read .pc files and print compiler and linker flags"
+            VALUE "FileVersion", "@PROJECT_VERSION@"
+            VALUE "ProductName", "pkgconf"
+            VALUE "ProductVersion", "@PROJECT_VERSION@"
+            VALUE "LegalCopyright", "Copyright (c) 2025-2026, the Carbide project and niXman"
+            VALUE "OriginalFilename", "pkgconf.exe"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

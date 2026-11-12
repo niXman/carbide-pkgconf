@@ -30,4 +30,21 @@ if ( PKGCONF_STATIC_EXE AND MINGW )
     target_link_options(pkgconf PRIVATE -static -static-libgcc -static-libstdc++)
 endif()
 
+if ( WIN32 )
+    enable_language(RC)
+    set(PKGCONF_ICON "${CMAKE_CURRENT_SOURCE_DIR}/resources/pkgconf.ico")
+    set(PKGCONF_VERSION_CSV "${PROJECT_VERSION_MAJOR},${PROJECT_VERSION_MINOR},${PROJECT_VERSION_PATCH},0")
+    configure_file(
+        resources/pkgconf.rc.in
+        "${CMAKE_CURRENT_BINARY_DIR}/pkgconf.rc"
+        @ONLY
+    )
+    target_sources(pkgconf PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/pkgconf.rc")
+    set_source_files_properties(
+        "${CMAKE_CURRENT_BINARY_DIR}/pkgconf.rc"
+        PROPERTIES
+            OBJECT_DEPENDS "${PKGCONF_ICON}"
+    )
+endif()
+
 install(TARGETS pkgconf RUNTIME DESTINATION bin)
