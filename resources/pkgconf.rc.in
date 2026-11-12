@@ -13,11 +13,12 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
+            VALUE "Comments", "https://carbide-x64.org/"
             VALUE "FileDescription", "Read .pc files and print compiler and linker flags"
             VALUE "FileVersion", "@PROJECT_VERSION@"
             VALUE "ProductName", "pkgconf"
             VALUE "ProductVersion", "@PROJECT_VERSION@"
-            VALUE "LegalCopyright", "Copyright (c) 2025-2026, the Carbide project and niXman"
+            VALUE "LegalCopyright", "Copyright (c) 2025-2026, the Carbide project and Others"
             VALUE "OriginalFilename", "pkgconf.exe"
         END
     END
