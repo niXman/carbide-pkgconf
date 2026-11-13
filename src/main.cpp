@@ -58,13 +58,13 @@ enum class exit_code : int {
 };
 
 struct options: cmdargs::kwords_group {
-    CMDARGS_OPTION(prefix, std::string, "tree that contains lib/pkgconfig", optional);
+    CMDARGS_OPTION(prefix, std::string_view, "tree that contains lib/pkgconfig", optional);
     CMDARGS_OPTION(is_static, bool, "also emit Libs.private and Cflags.private", optional, name_("static"));
     CMDARGS_OPTION(cflags, bool, "print Cflags", optional);
     CMDARGS_OPTION(libs, bool, "print Libs", optional);
     CMDARGS_OPTION(modversion, bool, "print Version", optional);
     CMDARGS_OPTION(exists, bool, "succeed if the module is found", optional);
-    CMDARGS_OPTION(module, std::string, "module name", positional);
+    CMDARGS_OPTION(module, std::string_view, "module name", positional);
     CMDARGS_OPTION_HELP();
 };
 

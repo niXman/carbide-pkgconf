@@ -13,7 +13,7 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "Comments", "https://carbide-x64.org/"
+            VALUE "Comments", "https://carbide-x64.org/, https://github.com/niXman/carbide, https://github.com/niXman/carbidepm, https://github.com/niXman/carbide-pkgconf"
             VALUE "FileDescription", "Read .pc files and print compiler and linker flags"
             VALUE "FileVersion", "@PROJECT_VERSION@"
             VALUE "ProductName", "pkgconf"
